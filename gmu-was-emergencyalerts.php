@@ -2,7 +2,7 @@
 /**
  * Plugin Name:   Mason WordPress: GMU Emergency Alerts
  * Description:   Display official GMU emergency alerts in a banner at the top of a WordPress site.
- * Version:       1.0.0.beta
+ * Version:       1.0.0.beta3
  * Author:        ITS Web Services, George Mason University
  * Author URI:    https://its.gmu.edu
  * Text Domain:   gmu-was-emergencyalerts
