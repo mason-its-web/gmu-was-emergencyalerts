@@ -1,0 +1,57 @@
+
+/* Details block styles */
+
+/* Adust whitespace for all non-summary child elements */
+details.gmu-emergency-alert-details > :not(summary) {
+    padding: .5em 0 1em 0;
+  }
+  
+  details.gmu-emergency-alert-details {
+    position: relative;
+    background-color: #fbf3da;
+    border-top: 3px solid #fc3;
+    padding-left: 1em;
+  }
+    
+  details.gmu-emergency-alert-details > summary {
+    list-style: none;
+    display: block;
+    padding: .5em 2em .5em 0;
+    color: #333;
+    letter-spacing: .025em;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 1.3em;
+    cursor: pointer;
+  }
+  
+  details.gmu-emergency-alert-details > summary:hover{
+    color: #333;
+  }
+  
+  /* Hide browser default arrow on details elements */
+  details.gmu-emergency-alert-details.summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Add plus/minus icons for closed and open states */
+  details.gmu-emergency-alert-details summary::after {
+    font-weight: 900;
+     font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: .5em;
+    content: "\f055"; 
+    color: #9c832f;
+    cursor: pointer;
+  }
+  details[open].gmu-emergency-alert-details summary::after {
+    content: "\f056";
+  }
+
+  details.gmu-emergency-alert-details .gmu-emergency-alert-datetime {
+    display: block;
+    font-style: italic;
+    font-size: 1.6rem;
+  }
