@@ -12,7 +12,7 @@
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 date_default_timezone_set( 'America/New_York' );
@@ -43,17 +43,17 @@ add_action( 'wp_body_open', array( $alerts, 'display_alert_placeholder' ) );
 
 // Settings page functions.
 add_action(
-    'admin_menu',
-    array( $settings_form, 'gmu_was_emergencyalerts_add_settings_page' )
+	'admin_menu',
+	array( $settings_form, 'gmu_was_emergencyalerts_add_settings_page' )
 );
 
 add_action(
-    'admin_init',
-    array( $settings_form, 'gmu_was_emergencyalerts_register_settings' )
+	'admin_init',
+	array( $settings_form, 'gmu_was_emergencyalerts_register_settings' )
 );
 
 // Settings link on plugins page.
 add_filter(
-    'plugin_action_links_' . plugin_basename( __FILE__ ),
-    array( $settings_form, 'gmu_was_emergencyalerts_plugin_action_links' )
+	'plugin_action_links_' . plugin_basename( __FILE__ ),
+	array( $settings_form, 'gmu_was_emergencyalerts_plugin_action_links' )
 );
