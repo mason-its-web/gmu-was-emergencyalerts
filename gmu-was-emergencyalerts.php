@@ -27,18 +27,18 @@ $update_checker = PucFactory::buildUpdateChecker(
 	'gmu-was-emergencyalerts'
 );
 
-require 'src/class-gmu-active-alerts.php';
-require 'src/class-gmu-alerts-settings-form.php';
+require 'src/class-gmuactivealerts.php';
+require 'src/class-gmualertssettingsform.php';
 
 $alerts        = new GMUActiveAlerts();
 $settings_form = new GMUAlertsSettingsForm();
 
-add_action( 'wp_enqueue_scripts', array( $alerts, 'enqueueAssets' ) );
+add_action( 'wp_enqueue_scripts', array( $alerts, 'enqueue_assets' ) );
 
-add_action( 'wp_ajax_gmu_get_active_alert', array( $alerts, 'ajaxDisplayAlert' ) );
-add_action( 'wp_ajax_nopriv_gmu_get_active_alert', array( $alerts, 'ajaxDisplayAlert' ) );
+add_action( 'wp_ajax_gmu_get_active_alert', array( $alerts, 'ajax_display_alert' ) );
+add_action( 'wp_ajax_nopriv_gmu_get_active_alert', array( $alerts, 'ajax_display_alert' ) );
 
-add_action( 'wp_body_open', array( $alerts, 'displayAlertPlaceholder' ) );
+add_action( 'wp_body_open', array( $alerts, 'display_alert_placeholder' ) );
 
 
 // Settings page functions.
