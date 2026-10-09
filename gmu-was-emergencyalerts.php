@@ -27,8 +27,8 @@ $update_checker = PucFactory::buildUpdateChecker(
 	'gmu-was-emergencyalerts'
 );
 
-require 'src/GMUActiveAlerts.php';
-require 'src/GMUAlertsSettingsForm.php';
+require 'src/class-gmu-active-alerts.php';
+require 'src/class-gmu-alerts-settings-form.php';
 
 $alerts        = new GMUActiveAlerts();
 $settings_form = new GMUAlertsSettingsForm();
